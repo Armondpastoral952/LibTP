@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Raphael Mudge, Adversary Fan Fiction Writers Guild
+ * Copyright 2025 Daniel Duggan, Zero-Point Security
  *
  * Redistribution and use in source and binary forms, with or without modification, are
  * permitted provided that the following conditions are met:
