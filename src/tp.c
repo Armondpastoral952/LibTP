@@ -28,10 +28,10 @@
 
 #include "tp.h"
 
-WINBASEAPI VOID  NTAPI  NTDLL$TpAllocWork            (PTP_WORK*, PTP_WORK_CALLBACK, PVOID, PTP_CALLBACK_ENVIRON);
-WINBASEAPI VOID  NTAPI  NTDLL$TpPostWork             (PTP_WORK);
-WINBASEAPI VOID  NTAPI  NTDLL$TpReleaseWork          (PTP_WORK);
-WINBASEAPI DWORD WINAPI KERNEL32$WaitForSingleObject (HANDLE, DWORD);
+WINBASEAPI VOID NTAPI NTDLL$TpAllocWork   (PTP_WORK*, PTP_WORK_CALLBACK, PVOID, PTP_CALLBACK_ENVIRON);
+WINBASEAPI VOID NTAPI NTDLL$TpPostWork    (PTP_WORK);
+WINBASEAPI VOID NTAPI NTDLL$TpWaitForWork (PTP_WORK, BOOL);
+WINBASEAPI VOID NTAPI NTDLL$TpReleaseWork (PTP_WORK);
 
 void __attribute__((naked)) WorkCallback()
 {
@@ -56,13 +56,12 @@ void __attribute__((naked)) WorkCallback()
     );
 }
 
-VOID ProxyNtApi(NTARGS * args, DWORD delay)
+VOID ProxyNtApi(NTARGS * args)
 {
     PTP_WORK WorkReturn = NULL;
 
     NTDLL$TpAllocWork(&WorkReturn, (PTP_WORK_CALLBACK)WorkCallback, args, NULL);
     NTDLL$TpPostWork(WorkReturn);
+    NTDLL$TpWaitForWork(WorkReturn, FALSE);
     NTDLL$TpReleaseWork(WorkReturn);
-
-    KERNEL32$WaitForSingleObject((HANDLE)(-1), delay);
 }

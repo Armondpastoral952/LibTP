@@ -12,4 +12,4 @@ typedef struct {
     ULONG_PTR argument6;
 } NTARGS;
 
-VOID ProxyNtApi(NTARGS * args, DWORD delay); 
+VOID ProxyNtApi(NTARGS * args); 
